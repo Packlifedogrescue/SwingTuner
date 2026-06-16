@@ -2,7 +2,7 @@
 
 import type { MouseEvent } from 'react'
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
-import PoseSkeleton from './PoseSkeleton'
+import SwingPathVisual from './SwingPathVisual'
 import { CameraIcon, PoseIcon, FlagIcon, CompareIcon, ScoreIcon, CheckIcon } from './icons'
 
 const METRICS = [
@@ -11,7 +11,7 @@ const METRICS = [
   { label: 'Swing DNA', value: '87' },
 ]
 
-const TABS = ['3D', 'Face On', 'Down Line', 'Overhead']
+const TABS = ['Overview', 'Path', 'Tempo']
 
 export default function SwingAnalysisPhone() {
   const x = useMotionValue(0)
@@ -86,7 +86,7 @@ export default function SwingAnalysisPhone() {
           <div className="relative mt-4 h-44 overflow-hidden rounded-2xl border border-white/5 bg-black/40">
             <div className="dot-grid absolute inset-0 opacity-60" />
             <div className="absolute inset-x-0 top-0 h-px bg-gold/60 animate-scan" />
-            <PoseSkeleton className="absolute inset-0 h-full w-full p-3" />
+            <SwingPathVisual className="absolute inset-0 h-full w-full p-4" />
           </div>
 
           <div className="mt-3 flex items-center gap-2">

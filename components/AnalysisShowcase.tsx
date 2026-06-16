@@ -1,4 +1,4 @@
-import PoseSkeleton from './PoseSkeleton'
+import SwingPathVisual from './SwingPathVisual'
 import { CheckIcon } from './icons'
 
 const LEFT_METRICS = [
@@ -23,25 +23,38 @@ const CHECKLIST = [
 export default function AnalysisShowcase() {
   return (
     <div className="grid items-center gap-10 rounded-3xl border border-white/10 bg-white/[0.02] px-6 py-10 sm:px-10 sm:py-14 lg:grid-cols-2 lg:gap-16">
-      <div className="relative mx-auto h-[380px] w-full max-w-md">
+      <div className="relative mx-auto h-[380px] w-full max-w-md overflow-hidden">
         {LEFT_METRICS.map((m, i) => (
-          <div key={m.label} className="absolute left-0 text-left" style={{ top: `${8 + i * 30}%` }}>
+          <div key={m.label} className="absolute left-0 z-10 text-left" style={{ top: `${8 + i * 30}%` }}>
             <div className="text-[10px] uppercase tracking-wide text-white/40">{m.label}</div>
             <div className="font-mono text-lg font-semibold text-white">{m.value}</div>
           </div>
         ))}
 
         {RIGHT_METRICS.map((m, i) => (
-          <div key={m.label} className="absolute right-0 text-right" style={{ top: `${8 + i * 30}%` }}>
+          <div key={m.label} className="absolute right-0 z-10 text-right" style={{ top: `${8 + i * 30}%` }}>
             <div className="text-[10px] uppercase tracking-wide text-white/40">{m.label}</div>
             <div className="font-mono text-lg font-semibold text-white">{m.value}</div>
           </div>
         ))}
 
-        <div className="absolute inset-x-0 bottom-6 mx-auto h-10 w-56 animate-spin-slow rounded-full bg-[conic-gradient(from_0deg,rgba(212,175,90,0.04),rgba(212,175,90,0.4),rgba(212,175,90,0.04))] blur-sm" />
-        <div className="absolute inset-x-0 bottom-8 mx-auto h-6 w-48 rounded-full border border-gold/30 bg-black/40" />
+        <div className="absolute inset-x-0 bottom-0 h-36 [perspective:400px]">
+          <div
+            className="h-full w-full origin-bottom"
+            style={{
+              transform: 'rotateX(65deg)',
+              backgroundImage:
+                'linear-gradient(rgba(212,175,90,0.16) 1px, transparent 1px), linear-gradient(90deg, rgba(212,175,90,0.16) 1px, transparent 1px)',
+              backgroundSize: '22px 22px',
+              maskImage: 'linear-gradient(to top, black, transparent)',
+              WebkitMaskImage: 'linear-gradient(to top, black, transparent)',
+            }}
+          />
+        </div>
 
-        <PoseSkeleton className="absolute inset-x-0 top-2 mx-auto h-[330px] w-auto animate-float" />
+        <div className="absolute inset-0 -z-10 m-auto h-48 w-48 self-center rounded-full bg-gold/10 blur-3xl" />
+
+        <SwingPathVisual className="absolute inset-x-0 top-10 mx-auto h-64 w-auto animate-float" />
       </div>
 
       <div>

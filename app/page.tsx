@@ -134,12 +134,7 @@ export default function LandingPage() {
 
       <section className="mx-auto grid max-w-6xl gap-16 px-6 pb-24 pt-10 lg:grid-cols-2 lg:items-center lg:gap-12">
         <div className="animate-fade-up">
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-white/60">
-            <span className="h-1.5 w-1.5 rounded-full bg-gold" />
-            Coming soon to iPhone &amp; Apple Watch
-          </span>
-
-          <h1 className="mt-6 text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl">
+          <h1 className="text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl">
             See your swing.
             <br />
             <span className="text-gold-gradient">Perfect your game.</span>
