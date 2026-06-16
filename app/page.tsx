@@ -1,46 +1,80 @@
 import WaitlistForm from '@/components/WaitlistForm'
-import TunerGauge from '@/components/TunerGauge'
+import PhoneMock from '@/components/PhoneMock'
+import {
+  CameraIcon,
+  PoseIcon,
+  CubeIcon,
+  WatchIcon,
+  FlagIcon,
+  ScoreIcon,
+  CompareIcon,
+  PenIcon,
+} from '@/components/icons'
 
 const FEATURES = [
   {
-    n: '01',
-    title: 'Swing Capture, Two Ways',
-    body: 'Record a swing on your phone or pair a clip-on sensor — SwingTuner reads it either way.',
+    icon: CameraIcon,
+    title: '240fps Slow-Motion Capture',
+    body: 'Film at 240 frames per second and see every detail of your swing you’ve never seen before.',
   },
   {
-    n: '02',
-    title: 'Instant Swing Score',
-    body: 'Tempo, plane, and path are broken down into one score you can track round over round.',
+    icon: PoseIcon,
+    title: 'AI Body Pose Detection',
+    body: '19 body keypoints tracked across every frame — spine tilt, shoulder rotation, hip turn, X-Factor, knee flex, head stability — measured automatically.',
   },
   {
-    n: '03',
-    title: 'Tempo & Plane Feedback',
-    body: 'See exactly where your transition rushes or your plane drifts, broken down swing by swing.',
+    icon: CubeIcon,
+    title: '3D Avatar Replay',
+    body: 'Watch your swing replayed on a 3D avatar — face-on, down the line, or overhead. Rotate and analyze from any angle.',
   },
   {
-    n: '04',
-    title: 'Built to Track Progress',
-    body: 'Every session logs to your history, so you can see real improvement — not just one good swing.',
+    icon: WatchIcon,
+    title: 'Apple Watch Auto-Detect',
+    body: 'Wear your Watch while you swing. It detects impact automatically and clips the exact moment — no tapping required.',
+  },
+  {
+    icon: FlagIcon,
+    title: 'AI Swing Coach',
+    body: 'Plain-English feedback based on your actual numbers, not generic tips — with priority fixes and drills built for your exact faults.',
+  },
+  {
+    icon: ScoreIcon,
+    title: 'Swing DNA Score',
+    body: 'Every swing gets a 0–100 score built from tempo, X-Factor, spine consistency, head stability, and weight shift.',
+  },
+  {
+    icon: CompareIcon,
+    title: 'Side-by-Side Comparison',
+    body: 'Compare any two swings frame by frame and see exactly what changed — and what didn’t.',
+  },
+  {
+    icon: PenIcon,
+    title: 'Drawing Tools',
+    body: 'Pause on any frame and draw lines, angles, and circles directly on your slow-mo footage.',
   },
 ]
 
-const SAMPLE_SWINGS = [
-  { club: 'Driver', score: 87, tempo: '3.0:1', tag: 'On Plane' },
-  { club: '7 Iron', score: 74, tempo: '2.4:1', tag: 'Early Extension' },
-  { club: 'Wedge', score: 91, tempo: '3.1:1', tag: 'On Plane' },
-] as const
-
-function scoreTone(score: number) {
-  if (score >= 85) return 'bg-good/15 text-good'
-  if (score >= 70) return 'bg-warn/15 text-warn'
-  return 'bg-bad/15 text-bad'
-}
+const METRICS = [
+  'X-Factor',
+  'Tempo Ratio',
+  'Spine Tilt',
+  'Shoulder Tilt',
+  'Pelvis Rotation',
+  'Head Movement',
+  'Weight Shift',
+  'Knee Flex',
+  'Hand Path',
+  'Attack Angle',
+]
 
 export default function LandingPage() {
   return (
     <main className="relative overflow-hidden">
+      <div className="fairway-stripes pointer-events-none absolute inset-x-0 top-0 -z-10 h-[640px]" />
+
       <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-8">
-        <span className="font-mono text-sm font-medium tracking-wide text-white">
+        <span className="flex items-center gap-2 font-mono text-sm font-medium tracking-wide text-white">
+          <FlagIcon className="h-4 w-4 text-good" />
           Swing<span className="text-good">Tuner</span>
         </span>
         <a
@@ -55,16 +89,17 @@ export default function LandingPage() {
         <div className="animate-fade-up">
           <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-white/60">
             <span className="h-1.5 w-1.5 rounded-full bg-good" />
-            SwingTuner is teeing up
+            Coming soon to iPhone &amp; Apple Watch
           </span>
 
           <h1 className="mt-6 text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl">
-            Tune your swing before it costs you strokes.
+            The most advanced AI swing analyzer ever built.
           </h1>
 
           <p className="mt-5 max-w-lg text-lg leading-relaxed text-white/60">
-            Record a swing on your phone or pair a clip-on sensor — SwingTuner reads your
-            tempo, plane, and impact, and scores it instantly so every rep makes you better.
+            Record your swing in 240fps slow motion. SwingTuner tracks 19 body keypoints,
+            replays it on a 3D avatar, and your AI caddie tells you exactly what to fix
+            &mdash; in plain English.
           </p>
 
           <div id="waitlist" className="mt-8 max-w-md">
@@ -76,16 +111,29 @@ export default function LandingPage() {
         </div>
 
         <div className="flex justify-center lg:justify-end">
-          <TunerGauge />
+          <PhoneMock />
         </div>
       </section>
 
       <section className="mx-auto max-w-6xl px-6 py-20">
-        <div className="grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+        <h2 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+          Everything your swing has been hiding.
+        </h2>
+        <p className="mt-2 max-w-xl text-sm text-white/50">
+          Capture, analysis, and coaching built into one app &mdash; no separate camera
+          rig, no guesswork.
+        </p>
+
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {FEATURES.map((f) => (
-            <div key={f.n}>
-              <span className="font-mono text-sm text-white/30">{f.n}</span>
-              <h3 className="mt-3 text-base font-semibold text-white">{f.title}</h3>
+            <div
+              key={f.title}
+              className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition hover:border-white/20 hover:bg-white/[0.05]"
+            >
+              <div className="inline-flex rounded-xl border border-white/10 bg-white/5 p-2.5 text-good">
+                <f.icon className="h-5 w-5" />
+              </div>
+              <h3 className="mt-4 text-base font-semibold text-white">{f.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-white/55">{f.body}</p>
             </div>
           ))}
@@ -93,37 +141,25 @@ export default function LandingPage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-6 py-20">
-        <h2 className="text-2xl font-semibold tracking-tight text-white">
-          What a tuned swing looks like
-        </h2>
-        <p className="mt-2 text-sm text-white/50">
-          A sample session from the app — illustrative, while SwingTuner is in private beta.
-        </p>
+        <div className="rounded-3xl border border-white/10 bg-white/[0.02] px-8 py-12 text-center">
+          <h2 className="text-xl font-semibold tracking-tight text-white">
+            Ten metrics, every swing.
+          </h2>
+          <p className="mx-auto mt-2 max-w-md text-sm text-white/50">
+            Computed automatically from your slow-motion capture &mdash; no markers, no
+            manual tagging.
+          </p>
 
-        <div className="mt-8 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03]">
-          {SAMPLE_SWINGS.map((s, i) => (
-            <div
-              key={i}
-              className={`flex flex-col gap-2 px-5 py-4 sm:grid sm:grid-cols-3 sm:items-center sm:gap-4 ${
-                i !== 0 ? 'border-t border-white/5' : ''
-              }`}
-            >
-              <div className="flex items-center gap-3">
-                <span className="font-mono text-sm font-medium text-white">{s.club}</span>
-                <span
-                  className={`rounded-full px-2 py-0.5 font-mono text-xs font-semibold ${scoreTone(
-                    s.score,
-                  )}`}
-                >
-                  {s.score}
-                </span>
-              </div>
-              <span className="font-mono text-sm text-white/70 sm:text-center">
-                {s.tempo} tempo
+          <div className="mx-auto mt-8 flex max-w-3xl flex-wrap justify-center gap-3">
+            {METRICS.map((m) => (
+              <span
+                key={m}
+                className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 font-mono text-sm text-white/70"
+              >
+                {m}
               </span>
-              <span className="font-mono text-xs text-white/40 sm:text-right">{s.tag}</span>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
@@ -143,8 +179,7 @@ export default function LandingPage() {
 
       <footer className="mx-auto max-w-6xl px-6 py-10 text-center">
         <p className="font-mono text-xs text-white/30">
-          © {new Date().getFullYear()} SwingTuner. Built for golfers who want proof, not
-          guesses.
+          &copy; {new Date().getFullYear()} SwingTuner. Analyze. Improve. Repeat.
         </p>
       </footer>
     </main>
