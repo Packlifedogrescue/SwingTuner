@@ -89,3 +89,33 @@ export function FlagIcon({ className }: IconProps) {
     </svg>
   )
 }
+
+export function CheckIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={className}>
+      <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.4" />
+      <path
+        d="M8.25 12.5 10.8 15l5-6"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
+
+export function GolfBallIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className}>
+      <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.2" fill="none" />
+      <circle cx="9" cy="9.5" r="0.9" fill="currentColor" />
+      <circle cx="13.2" cy="8" r="0.9" fill="currentColor" />
+      <circle cx="16" cy="11.5" r="0.9" fill="currentColor" />
+      <circle cx="8" cy="13.2" r="0.9" fill="currentColor" />
+      <circle cx="11.8" cy="13.8" r="0.9" fill="currentColor" />
+      <circle cx="15.2" cy="15.3" r="0.9" fill="currentColor" />
+      <circle cx="10.3" cy="17" r="0.9" fill="currentColor" />
+    </svg>
+  )
+}

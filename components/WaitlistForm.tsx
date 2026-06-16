@@ -39,7 +39,7 @@ export default function WaitlistForm({ className = '' }: { className?: string })
   if (status === 'success') {
     return (
       <div className={className}>
-        <p className="flex items-center gap-2 rounded-lg border border-good/30 bg-good/10 px-4 py-3 text-sm text-good">
+        <p className="flex items-center gap-2 rounded-lg border border-gold/30 bg-gold/10 px-4 py-3 text-sm text-gold-light">
           <span aria-hidden>✓</span> {message}
         </p>
       </div>
@@ -55,12 +55,12 @@ export default function WaitlistForm({ className = '' }: { className?: string })
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="you@email.com"
-          className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-white/40 outline-none transition focus:border-indigo-400/60 focus:bg-white/[0.07] sm:flex-1"
+          className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-white/40 outline-none transition focus:border-gold/60 focus:bg-white/[0.07] sm:flex-1"
         />
         <button
           type="submit"
           disabled={status === 'loading'}
-          className="shrink-0 rounded-lg bg-white px-5 py-3 text-sm font-semibold text-ink transition hover:bg-white/90 disabled:opacity-60"
+          className="shrink-0 rounded-lg bg-gradient-to-b from-gold-light to-gold px-5 py-3 text-sm font-semibold text-ink shadow-[0_8px_24px_-8px_rgba(212,175,90,0.6)] transition hover:shadow-[0_8px_28px_-6px_rgba(212,175,90,0.85)] disabled:opacity-60"
         >
           {status === 'loading' ? 'Joining…' : 'Join the waitlist'}
         </button>

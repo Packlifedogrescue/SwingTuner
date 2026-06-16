@@ -9,13 +9,18 @@ const config: Config = {
         mono: ['var(--font-jetbrains-mono)'],
       },
       colors: {
-        good: '#34d399',
-        warn: '#fbbf24',
+        gold: {
+          light: '#f3da93',
+          DEFAULT: '#d4af5a',
+          dark: '#9c7a2e',
+        },
+        platinum: {
+          light: '#f7f7f9',
+          DEFAULT: '#d9dade',
+          dark: '#9a9ca3',
+        },
         bad: '#fb7185',
         ink: '#05070a',
-      },
-      backgroundImage: {
-        glow: 'radial-gradient(circle at 50% 0%, rgba(99,102,241,0.18), transparent 60%)',
       },
     },
   },
