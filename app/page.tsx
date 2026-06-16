@@ -2,7 +2,6 @@ import WaitlistForm from '@/components/WaitlistForm'
 import AnalysisShowcase from '@/components/AnalysisShowcase'
 import Reveal from '@/components/Reveal'
 import Logo from '@/components/Logo'
-import { Camera, Activity, Box, Watch, Flag, Gauge, Columns2, PenTool } from 'lucide-react'
 
 const NAV_LINKS = [
   { href: '#features', label: 'Features' },
@@ -11,30 +10,27 @@ const NAV_LINKS = [
 ]
 
 const HIGHLIGHTS = [
-  { icon: Camera, label: '240fps Capture' },
-  { icon: Activity, label: '19 Keypoints' },
-  { icon: Box, label: '3D Avatar Replay' },
-  { icon: Flag, label: 'AI Swing Coach' },
-  { icon: Gauge, label: 'Swing DNA Score' },
-  { icon: Watch, label: 'Apple Watch Auto' },
+  '240fps Capture',
+  '17 Keypoints',
+  '3D Avatar Replay',
+  'AI Swing Coach',
+  'Swing DNA Score',
+  'Apple Watch Auto',
 ]
 
 const STEPS = [
   {
     n: '01',
-    icon: Camera,
     title: 'Record',
     body: 'Film your swing at 240fps. Your Apple Watch detects impact automatically and clips the exact moment.',
   },
   {
     n: '02',
-    icon: Activity,
     title: 'Analyze',
-    body: 'Our AI tracks 19 body keypoints and builds your 3D avatar replay in seconds — no markers, no manual tagging.',
+    body: 'Our AI tracks 17 body keypoints and builds your 3D avatar replay in seconds — no markers, no manual tagging.',
   },
   {
     n: '03',
-    icon: Flag,
     title: 'Improve',
     body: 'Get plain-English coaching from your AI Swing Coach, with drills built for your exact faults.',
   },
@@ -42,42 +38,34 @@ const STEPS = [
 
 const FEATURES = [
   {
-    icon: Camera,
     title: '240fps Slow-Motion Capture',
     body: 'Film at 240 frames per second and see every detail of your swing you’ve never seen before.',
   },
   {
-    icon: Activity,
     title: 'AI Body Pose Detection',
-    body: '19 body keypoints tracked across every frame — spine tilt, shoulder rotation, hip turn, X-Factor, knee flex, head stability — measured automatically.',
+    body: '17 body keypoints tracked across every frame — spine tilt, shoulder rotation, hip turn, X-Factor, knee flex, head stability — measured automatically.',
   },
   {
-    icon: Box,
     title: '3D Avatar Replay',
     body: 'Watch your swing replayed on a 3D avatar — face-on, down the line, or overhead. Rotate and analyze from any angle.',
   },
   {
-    icon: Watch,
     title: 'Apple Watch Auto-Detect',
     body: 'Wear your Watch while you swing. It detects impact automatically and clips the exact moment — no tapping required.',
   },
   {
-    icon: Flag,
     title: 'AI Swing Coach',
     body: 'Plain-English feedback based on your actual numbers, not generic tips — with priority fixes and drills built for your exact faults.',
   },
   {
-    icon: Gauge,
     title: 'Swing DNA Score',
     body: 'Every swing gets a 0–100 score built from tempo, X-Factor, spine consistency, head stability, and weight shift.',
   },
   {
-    icon: Columns2,
     title: 'Side-by-Side Comparison',
     body: 'Compare any two swings frame by frame and see exactly what changed — and what didn’t.',
   },
   {
-    icon: PenTool,
     title: 'Drawing Tools',
     body: 'Pause on any frame and draw lines, angles, and circles directly on your slow-mo footage.',
   },
@@ -131,7 +119,7 @@ export default function LandingPage() {
           </h1>
 
           <p className="mt-5 max-w-lg text-lg leading-relaxed text-ink/60">
-            Record your swing in 240fps slow motion. SwingTuner tracks 19 body keypoints,
+            Record your swing in 240fps slow motion. SwingTuner tracks 17 body keypoints,
             replays it on a 3D avatar, and your AI Swing Coach tells you exactly what to fix
             &mdash; in plain English.
           </p>
@@ -146,14 +134,12 @@ export default function LandingPage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-6 pb-20">
-        <Reveal className="flex flex-wrap justify-center gap-x-10 gap-y-8 rounded-3xl border border-ink/10 bg-ink/[0.02] px-8 py-8 sm:gap-x-14">
-          {HIGHLIGHTS.map((h) => (
-            <div key={h.label} className="flex w-20 flex-col items-center gap-2.5 text-center">
-              <div className="inline-flex rounded-full border border-gold/30 bg-gold/10 p-3 text-gold">
-                <h.icon className="h-5 w-5" />
-              </div>
-              <span className="text-xs leading-tight text-ink/55">{h.label}</span>
-            </div>
+        <Reveal className="flex flex-wrap items-center justify-center gap-x-4 gap-y-4 rounded-3xl border border-ink/10 bg-ink/[0.02] px-8 py-7">
+          {HIGHLIGHTS.map((h, i) => (
+            <span key={h} className="flex items-center gap-4">
+              <span className="font-mono text-xs uppercase tracking-wide text-ink/55">{h}</span>
+              {i < HIGHLIGHTS.length - 1 && <span className="h-1 w-1 rounded-full bg-gold/50" />}
+            </span>
           ))}
         </Reveal>
       </section>
@@ -171,13 +157,8 @@ export default function LandingPage() {
         <div className="mt-10 grid gap-8 sm:grid-cols-3">
           {STEPS.map((s, i) => (
             <Reveal key={s.title} delay={i * 0.08}>
-              <div className="flex items-center gap-3">
-                <div className="inline-flex rounded-full border border-gold/30 bg-gold/10 p-3 text-gold">
-                  <s.icon className="h-5 w-5" />
-                </div>
-                <span className="font-mono text-xs text-ink/30">{s.n}</span>
-              </div>
-              <h3 className="mt-4 text-base font-semibold text-ink">{s.title}</h3>
+              <span className="font-mono text-3xl font-semibold text-gold-dark">{s.n}</span>
+              <h3 className="mt-3 text-base font-semibold text-ink">{s.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-ink/55">{s.body}</p>
             </Reveal>
           ))}
@@ -205,9 +186,7 @@ export default function LandingPage() {
           {FEATURES.map((f, i) => (
             <Reveal key={f.title} delay={(i % 4) * 0.06}>
               <div className="h-full rounded-2xl border border-ink/10 bg-ink/[0.03] p-6 transition hover:border-gold/30 hover:bg-ink/[0.05]">
-                <div className="inline-flex rounded-full border border-gold/30 bg-gold/10 p-2.5 text-gold">
-                  <f.icon className="h-5 w-5" />
-                </div>
+                <span className="block h-1 w-8 rounded-full bg-gradient-to-r from-gold-light to-gold" />
                 <h3 className="mt-4 text-base font-semibold text-ink">{f.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-ink/55">{f.body}</p>
               </div>

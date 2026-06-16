@@ -2,7 +2,7 @@ import { Check } from 'lucide-react'
 
 const CHECKLIST = [
   'Replay from face-on, down-the-line, or overhead',
-  'Track 19 body keypoints automatically',
+  'Track 17 body keypoints automatically',
   'See exactly what changed between swings',
   'Get drills built for your exact faults',
 ]
