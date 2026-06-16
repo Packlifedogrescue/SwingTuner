@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, type FormEvent } from 'react'
+import { Check } from 'lucide-react'
 
 type Status = 'idle' | 'loading' | 'success' | 'error'
 
@@ -39,8 +40,9 @@ export default function WaitlistForm({ className = '' }: { className?: string })
   if (status === 'success') {
     return (
       <div className={className}>
-        <p className="flex items-center gap-2 rounded-lg border border-gold/30 bg-gold/10 px-4 py-3 text-sm text-gold-light">
-          <span aria-hidden>✓</span> {message}
+        <p className="flex items-center gap-2 rounded-lg border border-gold/30 bg-gold/10 px-4 py-3 text-sm text-gold-dark">
+          <Check className="h-4 w-4 shrink-0" aria-hidden />
+          {message}
         </p>
       </div>
     )
@@ -55,7 +57,7 @@ export default function WaitlistForm({ className = '' }: { className?: string })
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="you@email.com"
-          className="w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-white/40 outline-none transition focus:border-gold/60 focus:bg-white/[0.07] sm:flex-1"
+          className="w-full rounded-lg border border-ink/10 bg-ink/5 px-4 py-3 text-sm text-ink placeholder-ink/40 outline-none transition focus:border-gold/60 focus:bg-ink/[0.07] sm:flex-1"
         />
         <button
           type="submit"

@@ -108,7 +108,7 @@ export default function LandingPage() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-white/60 transition hover:text-white"
+              className="text-sm text-ink/60 transition hover:text-ink"
             >
               {link.label}
             </a>
@@ -124,13 +124,13 @@ export default function LandingPage() {
 
       <section className="mx-auto max-w-3xl px-6 pb-24 pt-10 text-center">
         <div className="animate-fade-up flex flex-col items-center">
-          <h1 className="text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl">
+          <h1 className="text-4xl font-semibold leading-tight tracking-tight text-ink sm:text-5xl">
             See your swing.
             <br />
             <span className="text-gold-gradient">Perfect your game.</span>
           </h1>
 
-          <p className="mt-5 max-w-lg text-lg leading-relaxed text-white/60">
+          <p className="mt-5 max-w-lg text-lg leading-relaxed text-ink/60">
             Record your swing in 240fps slow motion. SwingTuner tracks 19 body keypoints,
             replays it on a 3D avatar, and your AI Swing Coach tells you exactly what to fix
             &mdash; in plain English.
@@ -138,7 +138,7 @@ export default function LandingPage() {
 
           <div id="waitlist" className="mt-8 w-full max-w-md">
             <WaitlistForm />
-            <p className="mt-3 text-xs text-white/40">
+            <p className="mt-3 text-xs text-ink/40">
               One email when we launch. No spam, unsubscribe anytime.
             </p>
           </div>
@@ -146,13 +146,13 @@ export default function LandingPage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-6 pb-20">
-        <Reveal className="flex flex-wrap justify-center gap-x-10 gap-y-8 rounded-3xl border border-white/10 bg-white/[0.02] px-8 py-8 sm:gap-x-14">
+        <Reveal className="flex flex-wrap justify-center gap-x-10 gap-y-8 rounded-3xl border border-ink/10 bg-ink/[0.02] px-8 py-8 sm:gap-x-14">
           {HIGHLIGHTS.map((h) => (
             <div key={h.label} className="flex w-20 flex-col items-center gap-2.5 text-center">
               <div className="inline-flex rounded-full border border-gold/30 bg-gold/10 p-3 text-gold">
                 <h.icon className="h-5 w-5" />
               </div>
-              <span className="text-xs leading-tight text-white/55">{h.label}</span>
+              <span className="text-xs leading-tight text-ink/55">{h.label}</span>
             </div>
           ))}
         </Reveal>
@@ -163,7 +163,7 @@ export default function LandingPage() {
           <span className="font-mono text-xs font-medium uppercase tracking-widest text-gold">
             How It Works
           </span>
-          <h2 className="mt-2 text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+          <h2 className="mt-2 text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
             3 simple steps. Better golf.
           </h2>
         </Reveal>
@@ -175,10 +175,10 @@ export default function LandingPage() {
                 <div className="inline-flex rounded-full border border-gold/30 bg-gold/10 p-3 text-gold">
                   <s.icon className="h-5 w-5" />
                 </div>
-                <span className="font-mono text-xs text-white/30">{s.n}</span>
+                <span className="font-mono text-xs text-ink/30">{s.n}</span>
               </div>
-              <h3 className="mt-4 text-base font-semibold text-white">{s.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-white/55">{s.body}</p>
+              <h3 className="mt-4 text-base font-semibold text-ink">{s.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-ink/55">{s.body}</p>
             </Reveal>
           ))}
         </div>
@@ -192,10 +192,10 @@ export default function LandingPage() {
 
       <section id="features" className="mx-auto max-w-6xl px-6 py-20">
         <Reveal>
-          <h2 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+          <h2 className="text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
             Everything you need to improve.
           </h2>
-          <p className="mt-2 max-w-xl text-sm text-white/50">
+          <p className="mt-2 max-w-xl text-sm text-ink/50">
             Capture, analysis, and coaching built into one app &mdash; no separate camera
             rig, no guesswork.
           </p>
@@ -204,12 +204,12 @@ export default function LandingPage() {
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {FEATURES.map((f, i) => (
             <Reveal key={f.title} delay={(i % 4) * 0.06}>
-              <div className="h-full rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition hover:border-gold/30 hover:bg-white/[0.05]">
+              <div className="h-full rounded-2xl border border-ink/10 bg-ink/[0.03] p-6 transition hover:border-gold/30 hover:bg-ink/[0.05]">
                 <div className="inline-flex rounded-full border border-gold/30 bg-gold/10 p-2.5 text-gold">
                   <f.icon className="h-5 w-5" />
                 </div>
-                <h3 className="mt-4 text-base font-semibold text-white">{f.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-white/55">{f.body}</p>
+                <h3 className="mt-4 text-base font-semibold text-ink">{f.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-ink/55">{f.body}</p>
               </div>
             </Reveal>
           ))}
@@ -217,11 +217,11 @@ export default function LandingPage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-6 py-20">
-        <Reveal className="rounded-3xl border border-white/10 bg-white/[0.02] px-8 py-12 text-center">
-          <h2 className="text-xl font-semibold tracking-tight text-white">
+        <Reveal className="rounded-3xl border border-ink/10 bg-ink/[0.02] px-8 py-12 text-center">
+          <h2 className="text-xl font-semibold tracking-tight text-ink">
             Ten metrics, every swing.
           </h2>
-          <p className="mx-auto mt-2 max-w-md text-sm text-white/50">
+          <p className="mx-auto mt-2 max-w-md text-sm text-ink/50">
             Computed automatically from your slow-motion capture &mdash; no markers, no
             manual tagging.
           </p>
@@ -230,7 +230,7 @@ export default function LandingPage() {
             {METRICS.map((m) => (
               <span
                 key={m}
-                className="rounded-full border border-gold/20 bg-gold/5 px-4 py-2 font-mono text-sm text-white/70 transition hover:border-gold/40"
+                className="rounded-full border border-fairway/25 bg-fairway/5 px-4 py-2 font-mono text-sm text-ink/70 transition hover:border-fairway/50"
               >
                 {m}
               </span>
@@ -240,16 +240,16 @@ export default function LandingPage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-6 py-20">
-        <Reveal className="flex flex-col items-center gap-8 rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.06] to-transparent px-8 py-14 text-center sm:flex-row sm:text-left">
-          <div className="relative h-20 w-20 shrink-0 rounded-full bg-[radial-gradient(circle_at_32%_28%,#ffffff,#e4e5e8_45%,#b9bbc1_75%,#8d8f96)] shadow-[inset_-6px_-6px_14px_rgba(0,0,0,0.25),0_10px_30px_-8px_rgba(0,0,0,0.6)]">
+        <Reveal className="flex flex-col items-center gap-8 rounded-3xl border border-ink/10 bg-gradient-to-br from-ink/[0.06] to-transparent px-8 py-14 text-center sm:flex-row sm:text-left">
+          <div className="relative h-20 w-20 shrink-0 rounded-full bg-[radial-gradient(circle_at_32%_28%,#ffffff,#eceee7_45%,#cfd1c5_75%,#a3a596)] shadow-[inset_-6px_-6px_14px_rgba(0,0,0,0.10),0_14px_28px_-10px_rgba(19,20,15,0.35)] ring-1 ring-ink/10">
             <div className="absolute inset-0 rounded-full opacity-40 [background-image:radial-gradient(circle,rgba(0,0,0,0.18)_1px,transparent_1.4px)] [background-size:7px_7px]" />
           </div>
 
           <div className="flex-1">
-            <h2 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+            <h2 className="text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
               Don&rsquo;t miss the launch.
             </h2>
-            <p className="mx-auto mt-3 max-w-md text-sm text-white/55 sm:mx-0">
+            <p className="mx-auto mt-3 max-w-md text-sm text-ink/55 sm:mx-0">
               Drop your email and we&rsquo;ll send one note when SwingTuner is live.
             </p>
           </div>
@@ -262,7 +262,7 @@ export default function LandingPage() {
 
       <footer className="mx-auto flex max-w-6xl flex-col items-center gap-3 px-6 py-10 text-center">
         <Logo className="text-sm" />
-        <p className="font-mono text-xs text-white/30">
+        <p className="font-mono text-xs text-ink/30">
           &copy; {new Date().getFullYear()} SwingTuner. Analyze. Improve. Repeat.
         </p>
       </footer>

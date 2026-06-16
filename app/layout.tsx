@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
-      <body className="bg-ink font-sans text-white antialiased">
+      <body className="bg-paper font-sans text-ink antialiased">
         <div className="pointer-events-none fixed inset-x-0 top-0 z-50 h-px bg-gradient-to-r from-transparent via-gold/70 to-transparent" />
         <div className="grain-overlay" />
         {children}
