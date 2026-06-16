@@ -1,18 +1,8 @@
 import WaitlistForm from '@/components/WaitlistForm'
-import SwingAnalysisPhone from '@/components/SwingAnalysisPhone'
 import AnalysisShowcase from '@/components/AnalysisShowcase'
 import Reveal from '@/components/Reveal'
 import Logo from '@/components/Logo'
-import {
-  CameraIcon,
-  PoseIcon,
-  CubeIcon,
-  WatchIcon,
-  FlagIcon,
-  ScoreIcon,
-  CompareIcon,
-  PenIcon,
-} from '@/components/icons'
+import { Camera, Activity, Box, Watch, Flag, Gauge, Columns2, PenTool } from 'lucide-react'
 
 const NAV_LINKS = [
   { href: '#features', label: 'Features' },
@@ -21,30 +11,30 @@ const NAV_LINKS = [
 ]
 
 const HIGHLIGHTS = [
-  { icon: CameraIcon, label: '240fps Capture' },
-  { icon: PoseIcon, label: '19 Keypoints' },
-  { icon: CubeIcon, label: '3D Avatar Replay' },
-  { icon: FlagIcon, label: 'AI Swing Coach' },
-  { icon: ScoreIcon, label: 'Swing DNA Score' },
-  { icon: WatchIcon, label: 'Apple Watch Auto' },
+  { icon: Camera, label: '240fps Capture' },
+  { icon: Activity, label: '19 Keypoints' },
+  { icon: Box, label: '3D Avatar Replay' },
+  { icon: Flag, label: 'AI Swing Coach' },
+  { icon: Gauge, label: 'Swing DNA Score' },
+  { icon: Watch, label: 'Apple Watch Auto' },
 ]
 
 const STEPS = [
   {
     n: '01',
-    icon: CameraIcon,
+    icon: Camera,
     title: 'Record',
     body: 'Film your swing at 240fps. Your Apple Watch detects impact automatically and clips the exact moment.',
   },
   {
     n: '02',
-    icon: PoseIcon,
+    icon: Activity,
     title: 'Analyze',
     body: 'Our AI tracks 19 body keypoints and builds your 3D avatar replay in seconds — no markers, no manual tagging.',
   },
   {
     n: '03',
-    icon: FlagIcon,
+    icon: Flag,
     title: 'Improve',
     body: 'Get plain-English coaching from your AI Swing Coach, with drills built for your exact faults.',
   },
@@ -52,42 +42,42 @@ const STEPS = [
 
 const FEATURES = [
   {
-    icon: CameraIcon,
+    icon: Camera,
     title: '240fps Slow-Motion Capture',
     body: 'Film at 240 frames per second and see every detail of your swing you’ve never seen before.',
   },
   {
-    icon: PoseIcon,
+    icon: Activity,
     title: 'AI Body Pose Detection',
     body: '19 body keypoints tracked across every frame — spine tilt, shoulder rotation, hip turn, X-Factor, knee flex, head stability — measured automatically.',
   },
   {
-    icon: CubeIcon,
+    icon: Box,
     title: '3D Avatar Replay',
     body: 'Watch your swing replayed on a 3D avatar — face-on, down the line, or overhead. Rotate and analyze from any angle.',
   },
   {
-    icon: WatchIcon,
+    icon: Watch,
     title: 'Apple Watch Auto-Detect',
     body: 'Wear your Watch while you swing. It detects impact automatically and clips the exact moment — no tapping required.',
   },
   {
-    icon: FlagIcon,
+    icon: Flag,
     title: 'AI Swing Coach',
     body: 'Plain-English feedback based on your actual numbers, not generic tips — with priority fixes and drills built for your exact faults.',
   },
   {
-    icon: ScoreIcon,
+    icon: Gauge,
     title: 'Swing DNA Score',
     body: 'Every swing gets a 0–100 score built from tempo, X-Factor, spine consistency, head stability, and weight shift.',
   },
   {
-    icon: CompareIcon,
+    icon: Columns2,
     title: 'Side-by-Side Comparison',
     body: 'Compare any two swings frame by frame and see exactly what changed — and what didn’t.',
   },
   {
-    icon: PenIcon,
+    icon: PenTool,
     title: 'Drawing Tools',
     body: 'Pause on any frame and draw lines, angles, and circles directly on your slow-mo footage.',
   },
@@ -132,8 +122,8 @@ export default function LandingPage() {
         </a>
       </header>
 
-      <section className="mx-auto grid max-w-6xl gap-16 px-6 pb-24 pt-10 lg:grid-cols-2 lg:items-center lg:gap-12">
-        <div className="animate-fade-up">
+      <section className="mx-auto max-w-3xl px-6 pb-24 pt-10 text-center">
+        <div className="animate-fade-up flex flex-col items-center">
           <h1 className="text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl">
             See your swing.
             <br />
@@ -146,16 +136,12 @@ export default function LandingPage() {
             &mdash; in plain English.
           </p>
 
-          <div id="waitlist" className="mt-8 max-w-md">
+          <div id="waitlist" className="mt-8 w-full max-w-md">
             <WaitlistForm />
             <p className="mt-3 text-xs text-white/40">
               One email when we launch. No spam, unsubscribe anytime.
             </p>
           </div>
-        </div>
-
-        <div className="flex justify-center lg:justify-end">
-          <SwingAnalysisPhone />
         </div>
       </section>
 
