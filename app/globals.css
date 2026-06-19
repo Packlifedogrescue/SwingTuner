@@ -12,10 +12,10 @@
 }
 
 body {
-  background-color: #faf8f2;
+  background-color: #13140f;
   background-image:
-    radial-gradient(circle at 15% 0%, rgba(212, 175, 90, 0.18), transparent 55%),
-    radial-gradient(circle at 85% 8%, rgba(47, 107, 70, 0.10), transparent 50%);
+    radial-gradient(circle at 15% 0%, rgba(212, 175, 90, 0.16), transparent 55%),
+    radial-gradient(circle at 85% 8%, rgba(250, 248, 242, 0.05), transparent 50%);
   background-attachment: fixed;
 }
 
@@ -24,10 +24,10 @@ body {
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #ece9dd;
+  background: #1f2018;
 }
 ::-webkit-scrollbar-thumb {
-  background: #c7c3b2;
+  background: #46473a;
   border-radius: 3px;
 }
 
@@ -40,21 +40,21 @@ body {
 }
 
 .dot-grid {
-  background-image: radial-gradient(rgba(19, 20, 15, 0.09) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(250, 248, 242, 0.10) 1px, transparent 1px);
   background-size: 24px 24px;
   mask-image: radial-gradient(ellipse 65% 55% at 50% 0%, black, transparent);
   -webkit-mask-image: radial-gradient(ellipse 65% 55% at 50% 0%, black, transparent);
 }
 
 .text-gold-gradient {
-  background-image: linear-gradient(135deg, #d9af52, #b3852f 55%, #7a5a1e);
+  background-image: linear-gradient(135deg, #f3da93, #d4af5a 55%, #9c7a2e);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
 .text-platinum-gradient {
-  background-image: linear-gradient(135deg, #2b2d26, #55564b 55%, #7e8073);
+  background-image: linear-gradient(135deg, #ffffff, #d9dbd2 55%, #9b9d8f);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

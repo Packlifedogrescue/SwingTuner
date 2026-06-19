@@ -57,7 +57,7 @@ export default function WaitlistForm({ className = '' }: { className?: string })
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="you@email.com"
-          className="w-full rounded-lg border border-ink/10 bg-ink/5 px-4 py-3 text-sm text-ink placeholder-ink/40 outline-none transition focus:border-gold/60 focus:bg-ink/[0.07] sm:flex-1"
+          className="w-full rounded-lg border border-paper/10 bg-paper/5 px-4 py-3 text-sm text-paper placeholder-paper/40 outline-none transition focus:border-gold/60 focus:bg-paper/[0.07] sm:flex-1"
         />
         <button
           type="submit"
