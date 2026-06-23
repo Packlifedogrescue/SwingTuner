@@ -10,7 +10,7 @@ export default function LandingPage() {
         <Logo className="text-lg" />
 
         <span className="mt-10 font-mono text-xs font-medium uppercase tracking-widest text-gold">
-          Launching Soon
+          AI Golf Swing Analyzer
         </span>
         <h1 className="mt-3 text-5xl font-semibold tracking-tight text-paper sm:text-6xl">
           <span className="text-gold-gradient">Coming Soon.</span>
