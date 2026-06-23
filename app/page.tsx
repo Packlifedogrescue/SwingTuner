@@ -10,14 +10,11 @@ export default function LandingPage() {
       <div className="animate-fade-up flex flex-col items-center">
         <Image src={logoLockup} alt="SwingTuner" priority className="h-auto w-40 sm:w-48" />
 
-        <span className="mt-10 font-mono text-xs font-medium uppercase tracking-widest text-gold">
-          AI Golf Swing Analyzer
-        </span>
-        <h1 className="mt-3 text-5xl font-semibold tracking-tight text-paper sm:text-6xl">
+        <h1 className="mt-8 text-5xl font-semibold tracking-tight text-paper sm:text-6xl">
           <span className="text-gold-gradient">Coming Soon.</span>
         </h1>
         <p className="mt-5 max-w-md text-lg leading-relaxed text-paper/60">
-          The most advanced AI golf swing analyzer. Be the first to know when SwingTuner
+          The most advanced golf swing analyzer. Be the first to know when SwingTuner
           launches.
         </p>
 

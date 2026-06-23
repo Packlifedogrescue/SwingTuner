@@ -10,9 +10,9 @@ const config: Config = {
       },
       colors: {
         gold: {
-          light: '#f3da93',
-          DEFAULT: '#d4af5a',
-          dark: '#9c7a2e',
+          light: '#edd9ab',
+          DEFAULT: '#d9ad43',
+          dark: '#8d6b1b',
         },
         paper: '#faf8f2',
         ink: '#13140f',

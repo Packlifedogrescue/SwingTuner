@@ -24,7 +24,7 @@ function SensorGraphic() {
         style={octagon}
         className="absolute h-[68%] w-[68%] bg-gradient-to-br from-gold-light/30 via-gold/10 to-transparent ring-1 ring-gold/30"
       />
-      <span className="absolute h-3 w-3 rounded-full bg-gold shadow-[0_0_14px_3px_rgba(212,175,90,0.65)]" />
+      <span className="absolute h-3 w-3 rounded-full bg-gold shadow-[0_0_14px_3px_rgba(217,173,67,0.65)]" />
     </div>
   )
 }

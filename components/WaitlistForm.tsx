@@ -62,7 +62,7 @@ export default function WaitlistForm({ className = '' }: { className?: string })
         <button
           type="submit"
           disabled={status === 'loading'}
-          className="shrink-0 rounded-lg bg-gradient-to-b from-gold-light to-gold px-5 py-3 text-sm font-semibold text-ink shadow-[0_8px_24px_-8px_rgba(212,175,90,0.6)] transition hover:shadow-[0_8px_28px_-6px_rgba(212,175,90,0.85)] disabled:opacity-60"
+          className="shrink-0 rounded-lg bg-gradient-to-b from-gold-light to-gold px-5 py-3 text-sm font-semibold text-ink shadow-[0_8px_24px_-8px_rgba(217,173,67,0.6)] transition hover:shadow-[0_8px_28px_-6px_rgba(217,173,67,0.85)] disabled:opacity-60"
         >
           {status === 'loading' ? 'Joining…' : 'Join the waitlist'}
         </button>
