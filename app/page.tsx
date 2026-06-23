@@ -6,8 +6,6 @@ export default function LandingPage() {
   return (
     <main className="relative flex min-h-screen flex-col items-center overflow-hidden px-6 py-8 text-center sm:py-12">
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="bg-glow bg-glow-a absolute -left-16 -top-24 h-72 w-72 bg-gold/30 sm:h-[26rem] sm:w-[26rem]" />
-        <div className="bg-glow bg-glow-b absolute -bottom-24 -right-12 h-72 w-72 bg-gold-light/20 sm:h-[24rem] sm:w-[24rem]" />
         <div className="dot-grid absolute inset-0" />
       </div>
 
