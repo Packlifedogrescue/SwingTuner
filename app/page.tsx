@@ -1,5 +1,6 @@
+import Image from 'next/image'
 import WaitlistForm from '@/components/WaitlistForm'
-import Logo from '@/components/Logo'
+import logoLockup from '@/public/logo-lockup.png'
 
 export default function LandingPage() {
   return (
@@ -7,7 +8,7 @@ export default function LandingPage() {
       <div className="dot-grid pointer-events-none absolute inset-x-0 top-0 -z-10 h-[640px]" />
 
       <div className="animate-fade-up flex flex-col items-center">
-        <Logo className="text-lg" />
+        <Image src={logoLockup} alt="SwingTuner" priority className="h-auto w-40 sm:w-48" />
 
         <span className="mt-10 font-mono text-xs font-medium uppercase tracking-widest text-gold">
           AI Golf Swing Analyzer
