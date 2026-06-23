@@ -43,22 +43,32 @@ body {
 .bg-glow {
   position: absolute;
   border-radius: 50%;
-  filter: blur(90px);
+  filter: blur(80px);
   will-change: transform;
 }
 
 @keyframes drift-a {
   0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(6%, 10%) scale(1.15); }
+  50% { transform: translate(20%, 26%) scale(1.25); }
 }
 @keyframes drift-b {
   0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(-8%, -8%) scale(1.1); }
+  50% { transform: translate(-22%, -20%) scale(1.2); }
+}
+
+.orbit-ring {
+  position: relative;
+}
+
+@keyframes orbit-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .bg-glow-a { animation: drift-a 24s ease-in-out infinite; }
-  .bg-glow-b { animation: drift-b 28s ease-in-out infinite; }
+  .bg-glow-a { animation: drift-a 16s ease-in-out infinite; }
+  .bg-glow-b { animation: drift-b 19s ease-in-out infinite; }
+  .orbit-ring { animation: orbit-spin 22s linear infinite; }
 }
 
 .dot-grid {
