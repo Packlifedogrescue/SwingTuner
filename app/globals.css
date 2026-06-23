@@ -56,19 +56,26 @@ body {
   50% { transform: translate(-22%, -20%) scale(1.2); }
 }
 
-.orbit-ring {
-  position: relative;
+.logo-shine {
+  background-image: linear-gradient(
+    115deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.9) 50%,
+    transparent 60%
+  );
+  background-size: 300% 300%;
+  background-position: -40% -40%;
 }
 
-@keyframes orbit-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+@keyframes shine-sweep {
+  0%, 15% { background-position: -40% -40%; }
+  55%, 100% { background-position: 140% 140%; }
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .bg-glow-a { animation: drift-a 16s ease-in-out infinite; }
   .bg-glow-b { animation: drift-b 19s ease-in-out infinite; }
-  .orbit-ring { animation: orbit-spin 22s linear infinite; }
+  .logo-shine { animation: shine-sweep 5s ease-in-out infinite; }
 }
 
 .dot-grid {

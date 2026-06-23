@@ -9,21 +9,24 @@ export default function LandingPage() {
         <div className="bg-glow bg-glow-a absolute -left-16 -top-24 h-72 w-72 bg-gold/30 sm:h-[26rem] sm:w-[26rem]" />
         <div className="bg-glow bg-glow-b absolute -bottom-24 -right-12 h-72 w-72 bg-gold-light/20 sm:h-[24rem] sm:w-[24rem]" />
         <div className="dot-grid absolute inset-0" />
-        <div className="absolute left-1/2 top-1/2 h-[22rem] w-[22rem] -translate-x-1/2 -translate-y-1/2 sm:h-[30rem] sm:w-[30rem]">
-          <div className="orbit-ring h-full w-full rounded-full border border-gold/15">
-            <span className="absolute -top-[3px] left-1/2 h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-gold shadow-[0_0_12px_3px_rgba(217,173,67,0.7)]" />
-          </div>
-        </div>
       </div>
 
       <div className="flex w-full flex-1 flex-col items-center justify-center">
         <div className="animate-fade-up flex flex-col items-center">
-          <Image
-            src={logoLockup}
-            alt="SwingTuner"
-            priority
-            className="h-auto w-32 sm:w-40 md:w-48"
-          />
+          <div className="relative w-32 sm:w-40 md:w-48">
+            <Image src={logoLockup} alt="SwingTuner" priority className="h-auto w-full" />
+            <div
+              className="logo-shine pointer-events-none absolute inset-0"
+              style={{
+                maskImage: 'url(/logo-lockup.png)',
+                WebkitMaskImage: 'url(/logo-lockup.png)',
+                maskSize: '100% 100%',
+                WebkitMaskSize: '100% 100%',
+                maskRepeat: 'no-repeat',
+                WebkitMaskRepeat: 'no-repeat',
+              }}
+            />
+          </div>
 
           <h1 className="mt-6 text-4xl font-semibold tracking-tight text-paper sm:mt-8 sm:text-5xl md:text-6xl">
             <span className="text-gold-gradient">Coming Soon.</span>
