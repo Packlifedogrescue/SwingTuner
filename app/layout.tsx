@@ -14,9 +14,9 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'SwingTuner — The most advanced AI golf swing analyzer.',
+  title: 'SwingTuner — Coming Soon',
   description:
-    'Record your swing in 240fps slow motion. SwingTuner tracks 17 body keypoints, replays it on a 3D avatar, and your AI Swing Coach tells you exactly what to fix.',
+    'The most advanced AI golf swing analyzer is launching soon. Join the waitlist to be the first to know.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
