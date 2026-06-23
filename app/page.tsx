@@ -4,29 +4,36 @@ import logoLockup from '@/public/logo-lockup.png'
 
 export default function LandingPage() {
   return (
-    <main className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 py-20 text-center">
-      <div className="dot-grid pointer-events-none absolute inset-x-0 top-0 -z-10 h-[640px]" />
+    <main className="relative flex min-h-screen flex-col items-center overflow-hidden px-6 py-8 text-center sm:py-12">
+      <div className="dot-grid pointer-events-none absolute inset-0 -z-10" />
 
-      <div className="animate-fade-up flex flex-col items-center">
-        <Image src={logoLockup} alt="SwingTuner" priority className="h-auto w-40 sm:w-48" />
+      <div className="flex w-full flex-1 flex-col items-center justify-center">
+        <div className="animate-fade-up flex flex-col items-center">
+          <Image
+            src={logoLockup}
+            alt="SwingTuner"
+            priority
+            className="h-auto w-32 sm:w-40 md:w-48"
+          />
 
-        <h1 className="mt-8 text-5xl font-semibold tracking-tight text-paper sm:text-6xl">
-          <span className="text-gold-gradient">Coming Soon.</span>
-        </h1>
-        <p className="mt-5 max-w-md text-lg leading-relaxed text-paper/60">
-          The most advanced golf swing analyzer. Be the first to know when SwingTuner
-          launches.
-        </p>
-
-        <div className="mt-10 w-full max-w-md">
-          <WaitlistForm />
-          <p className="mt-3 text-xs text-paper/40">
-            One email when we launch. No spam, unsubscribe anytime.
+          <h1 className="mt-6 text-4xl font-semibold tracking-tight text-paper sm:mt-8 sm:text-5xl md:text-6xl">
+            <span className="text-gold-gradient">Coming Soon.</span>
+          </h1>
+          <p className="mt-4 max-w-xs text-base leading-relaxed text-paper/60 sm:mt-5 sm:max-w-md sm:text-lg">
+            The most advanced golf swing analyzer. Be the first to know when SwingTuner
+            launches.
           </p>
+
+          <div className="mt-8 w-full max-w-xs sm:mt-10 sm:max-w-md">
+            <WaitlistForm />
+            <p className="mt-3 text-xs text-paper/40">
+              One email when we launch. No spam, unsubscribe anytime.
+            </p>
+          </div>
         </div>
       </div>
 
-      <p className="absolute bottom-8 font-mono text-xs text-paper/30">
+      <p className="shrink-0 pt-6 font-mono text-xs text-paper/30">
         &copy; {new Date().getFullYear()} SwingTuner
       </p>
     </main>
