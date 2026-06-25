@@ -7,7 +7,18 @@ export default function LandingPage() {
     <main className="relative flex min-h-screen flex-col items-center overflow-hidden px-6 py-8 text-center sm:py-12">
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="spotlight absolute left-1/2 top-1/2 h-[34rem] w-[34rem] rounded-full bg-gold/25 blur-[100px]" />
-        <div className="dot-grid absolute inset-0" />
+        <div
+          className="contour-ring absolute left-1/2 top-1/2 h-64 w-64 rounded-full border border-gold/25"
+          style={{ animationDelay: '0s' }}
+        />
+        <div
+          className="contour-ring absolute left-1/2 top-1/2 h-[26rem] w-[26rem] rounded-full border border-gold/20"
+          style={{ animationDelay: '2s' }}
+        />
+        <div
+          className="contour-ring absolute left-1/2 top-1/2 h-[36rem] w-[36rem] rounded-full border border-gold/15"
+          style={{ animationDelay: '4s' }}
+        />
       </div>
 
       <div className="flex w-full flex-1 flex-col items-center justify-center">
